@@ -1,4 +1,5 @@
 # Langkah langkah praktik git hub
+
 ## Instalasi git
 1. Download git di https://git-scm.com/downloads 
 2. instal git
@@ -47,4 +48,37 @@
     $ git push -u origin main
     ```
 ### Mengubah Isi dengan Branching and Merging
-13. 
+
+Dengan menggunakan cara ini, setiap kali akan melakukan perubaham, perubahan itu dilakukan di komputer lokal dengan membuat suatu cabang yang nantinya digunakan untuk menampung perubahan-perubahan tersebut. Setelah itu, cabang itu yang akan dikirim ke repo GitHub untuk dimintai review kemudian digabungkan (merge) ke main. Secara umum, repo yang dibuat biasanya sudah mempunyai satu branch yang disebut dengan main. Cara ini lebih aman, terstruktur, terkendali, dan mempunyai history yang lebih baik. Jika perubahan yang kita buat sudah terlalu kacau dan kita menyesal, maka ada cara untuk "membersihkan" repo lokal kita.
+
+13. untuk melihat cabang gunakan perintah
+    ```
+    git branch
+    ```
+    jika belum ada akan memunculkan master/main saja
+14. untuk membuat cabang baru 
+    ```
+    git branch "nama branch"
+    ```
+15. untuk pindah ke cabang baru adalah
+    ```
+    git checkout "nama branch"
+    ```
+16. kita bisa menambahkan file atau sekedar argumen
+    ```
+    $ git add -A
+    $ git commit -m "Add: isi README.md"
+    ```
+17. untuk menggabungkan cabang dan main gunakan perintah
+    ```
+    git checkout master
+    ```
+18. untuk berpindah ke main/master dahulu beikutnya untuk menggabungkan perintahnya 
+    ```
+    git merge "nama branch"
+    ```
+### sinkronasi
+Suatu saat, bisa saja terjadi kita menggunakan komputer lain dan mengedit repo melalui repo lokal di komputer lain, setelah itu pindah ke kamputer lain lagi. Saat itu, kita perlu melakukan sinkronisasi ke kemputer lokal. Perintah untuk sinkronisasi adalah:
+```
+git pull
+```
